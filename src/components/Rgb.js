@@ -32,12 +32,11 @@ export default class Rgb extends Component {
         let table = [];
         let id = 0;
         for (let i = 0; i < 100; i++) {
-                table.push(<div key={id} id={id} className='rgb_matrix_element' onClick={ this.setColor.bind(null, id) }></div>);
-                id++;
+            table.push(<div key={id} id={id} className='rgb_matrix_element' onClick={ this.setColor.bind(null, id) }></div>);
+            id++;
         }
         return table;
     }
-  
   
     createPalette = () => {
         let colors = ['#fdf41f', '#a80248', 
@@ -48,7 +47,7 @@ export default class Rgb extends Component {
         let id = 100;
   
         for (let i = 0; i < colors.length; i++) {
-            palette.push(<div key={id} id={id} className='color' onClick={this.getColor.bind(null, colors[i])} style={{ background: colors[i] }}></div>);
+            palette.push(<div key={id} id={id} className='color' onClick={ this.getColor.bind(null, colors[i]) } style={{ background: colors[i] }}></div>);
             id++;
         }
         return palette;
